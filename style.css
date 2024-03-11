@@ -1,0 +1,542 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,900&family=Josefin+Sans&family=Quicksand&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+
+::-webkit-scrollbar-track{
+  background: #222;
+}
+
+::-webkit-scrollbar-thumb{
+background: orangered;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: #d4d3d3;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+#home {
+  background: linear-gradient(#18171781, #18171781),
+    url(images/ricardo-gomez-angel-j5gCOKZdm6I-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#header-1 {
+  background-color: #007ac9;
+  padding: 15px 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.cont-left {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40rem;
+  margin-left: 5rem;
+  font-size: 0.9rem;
+}
+.cont-right {
+  width: 10rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 5rem;
+  font-size: 1.2rem;
+}
+
+header a:hover {
+  transform: translateY(10%);
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Nav Bar */
+#nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  top:3.3rem;
+  background: #22222248;
+}
+nav ul {
+  width: 27rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  /* border: 1px solid black; */
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 2px;
+}
+nav ul li:hover {
+  transform: translateY(10%);
+}
+
+nav .logo {
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+}
+nav .logo span {
+  color: #007ac9;
+}
+
+.active {
+  border-bottom: 3px solid orangered;
+}
+
+/* Page */
+#homepage {
+  padding: 5rem 0;
+  width: 90rem;
+}
+.intro-text {
+  border-left: 6px solid orangered;
+  color: white;
+  margin: 5rem 0 0 5rem;
+  padding: 1rem;
+  width: 41rem;
+  font-size: 35px;
+  font-family: "Archivo", sans-serif;
+  letter-spacing: 2px;
+}
+.intro-text span {
+  color: orangered;
+  font-weight: 700;
+  font-style: italic;
+}
+
+section p {
+  color: #ffffff;
+  margin: 1rem 5rem;
+  padding: 1.2rem;
+  width: 50rem;
+  font-weight: 400;
+  font-size: 18px;
+}
+section a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+section .purchase-btn {
+  border: none;
+  outline: none;
+  background: orangered;
+  border-radius: 6px;
+  margin: 1rem 0 6rem 6rem;
+  padding: 10px 25px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+section .purchase-btn:hover {
+  cursor: pointer;
+  background: white;
+  color: orangered;
+}
+
+/* Services */
+#services {
+  background-color: white;
+  margin-top: 1rem;
+}
+.services-title {
+  color: #007ac9;
+  letter-spacing: 5px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 20px;
+  margin-top: 3rem;
+}
+.services-title h3{
+  font-family: "Whisper", cursive;
+  font-weight: 800;
+  font-style: normal;
+}
+.services-title p {
+  color: black;
+  text-align: center;
+  letter-spacing: 0;
+  font-size: 16px;
+  margin: 10px auto;
+  width: 60%;
+}
+.services-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5rem;
+
+  gap: 5rem;
+}
+.services-holder .sect img {
+  border-radius: 10px;
+}
+
+.services-holder .sect h4 {
+  text-align: center;
+}
+.layer {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), #0079c98f);
+  border-radius: 10px;
+  position: absolute;
+  width: 270px;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: 0.5s ease;
+  /* cursor: pointer; */
+}
+
+.services-holder .sect:hover .layer {
+  height: 25.3rem;
+}
+/* .layer:hover {
+  height:25.3rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+} */
+
+.layer a {
+  margin: 0rem 3.2rem;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+}
+
+
+/* ################## WORKS ####################### */
+.works-title h3 {
+  font-family: "Whisper", cursive;
+  font-weight: 800;
+  font-style: normal;
+  color: white;
+  letter-spacing: 5px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 20px;
+  margin: 3rem;
+}
+
+.works-container {
+  padding: 1rem 0 1rem 0; /* margin: 1rem auto; */
+  width: 100%;
+  background-color: #007ac9;
+}
+
+.works-display {
+  margin: auto;
+  width: 70%;
+  min-height: fit-content;
+}
+
+.mySlides img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* ####################  About ######################### */
+#about {
+  text-align: center;
+  padding: 5rem;
+  margin: auto;
+  width: 100%;
+  background-image: url(images/pexels-nishant-aneja-4271641.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#about h3 {
+  font-family: "Whisper", cursive;
+  font-weight: 800;
+  font-style: normal;
+  color: white;
+  letter-spacing: 5px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 25px;
+  margin-top: 3rem;
+  
+}
+.about-page {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 2rem;
+  width: 70%;
+  padding: 2rem;
+  gap: 10%;
+  color: white;
+}
+
+.about-page button{
+  margin-top: 5rem;
+  border: none;
+  outline: none;
+  background: orangered;
+  border-radius: 6px;
+  padding: 10px 25px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.about-page button:hover{
+  cursor: pointer;
+  background: white;
+  color: orangered;
+}
+
+/* ################ Contact ################## */
+#contact {
+  background-color: #eee;
+  padding: 5rem;
+}
+
+.container {
+  background-color: --white;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+  min-width: 370px;
+  margin: 3rem auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+}
+.form-container {
+  display: flex;
+}
+
+.left-container {
+  flex: 1;
+  height: 480px;
+  background-color: orangered;
+}
+.right-container {
+  display: flex;
+  flex: 1;
+  height: 460px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+.right-container h2{
+  font-family: "Whisper", cursive;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.left-container {
+  display: flex;
+  flex: 1;
+  height: 480px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.left-container h2{
+  font-family: "Whisper", cursive;
+  font-weight: 800;
+  font-style: normal;
+}
+.left-container p {
+  font-size: 0.9rem;
+}
+
+.right-inner-container {
+  width: 60%;
+  text-align: center;
+}
+
+.left-inner-container {
+  height: 50%;
+  width: 80%;
+  text-align: center;
+  line-height: 22px;
+}
+
+input,
+textarea {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid teal;
+}
+
+#contact button {
+  border-radius: 20px;
+  border: 1px solid orangered;
+  background-color: orangered;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background-color: white;
+  color: orangered;
+}
+
+/* ################ Footer ################## */
+
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  background-color: #007ac9;
+  padding: 2rem;
+  color: white;
+}
+
+.col {
+  border: none;
+  width: 25%;
+  font-weight: 100;
+}
+.col-3{
+  gap: 2px;
+}
+
+#footer a{
+  color: white;
+  text-decoration: none;
+}
